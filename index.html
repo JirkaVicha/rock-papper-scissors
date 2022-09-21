@@ -4,17 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock-Paper-Scissors Game</title>
     
-    <title>Rock-Paper-Scissor Game</title>
 </head>
 <body>
-<h1>Rock - Paper - Scissors Game!</h1>
 
-<p id="comp-choice"></p>
-<p id="demo"></p>
+<div class="header">
+    <div class="container">
+<h1>ROCK - PAPER - SCISSORS GAME</h1>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <h2>Choose your option</h2>
+    </div>
+</div>
+
+<div class="buttons">
+    <div class="container">
+        <button id="rockBtn">ROCK</button>
+        <button id="paperBtn">PAPER</button>
+        <button id="scissorsBtn">SCISSORS</button>
+        <button id="resetBtn">New Game</button>
+    </div>
+</div>   
 
 
+<div class="section">
+    <div class="container-top">
+<div class="item1"><h5>Player choice: <span id="player-choice"></span></h5></div>
+<div class="item2"><h3>:</h3></div> 
+<div class="item3"><h5>Computer choice: <span id="comp-choice"></span></h5></div>
+    </div>
+    <div class="conteiner-bottom">
+<p id="paper"></p><p id="comp-choice"></p>
+<p id="scissors"></p><p id="comp-choice"></p>
+    </div>
+</div>
 
-    <script src="rps.js"></script>    
+<p id="result"></p>
+
+<div class="container-score">
+    <p id="player-score">0</p>
+    <p id="comp-score">0</p>
+</div>
+
+<div class="container-winner">
+    <h1>Winner is......<span id="winner"></span></h1>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p>ODIN project made by JirkaVicha 2022</p>
+    </div>
+</div>
+
+
+<script src="rps.js"></script>    
 </body>
+
 </html>
+

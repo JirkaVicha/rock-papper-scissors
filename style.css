@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: brown;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    height: 250px;
+    background-color: #311ff5;
+}
+
+.header .container {
+    min-width: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: x-large;
+}
+
+.content {
+    height: 100px;
+    background-color: rgb(45, 208, 153);
+}
+
+.content .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.buttons {
+    height: 150px;
+    background-color: rgb(45, 208, 153);
+}
+
+.buttons .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#rockBtn, #paperBtn, #scissorsBtn {
+    width: 200px;
+    height: 80px;
+    background-color: #311ff5;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#resetBtn {
+    width: 200px;
+    height: 80px;
+    background-color: #f08a41;
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#rockBtn:hover, #paperBtn:hover, #scissorsBtn:hover {
+    background-color: #f08a41;
+}
+
+#resetBtn:hover {
+    background-color: #5a5a58;
+}
+
+.section .container-top {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 25px;
+}
+
+.item1, .item2, .item3 {
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+    color: #3fceea;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-score {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.container-winner {
+    text-align: center;
+    color: #c5cfc4;
+    font-size: 30px;
+    font-weight: bold; 
+}
+
+#winner {
+    color: #09f11c; 
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    background-color: #311ff5;
+}
+
+.footer .container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+

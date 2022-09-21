@@ -1,35 +1,101 @@
-const choices = ["rock", "paper", "scissors"];
+const choices = ['ROCK', 'PAPER', 'SCISSORS'];
 
-let playerSelection = prompt("Your choice: ");
-let computerSelection = choices[Math.floor(Math.random() * 3)];
+// Buttons
+document.getElementById('rockBtn').addEventListener('click', rockButton);
+document.getElementById('paperBtn').addEventListener('click', paperButton);
+document.getElementById('scissorsBtn').addEventListener('click', scissorsButton);
+document.getElementById('resetBtn').addEventListener('click', resetAll);
 
-// function getComputerChoice() {
-//     let randomChoices = choices[Math.floor(Math.random() * 3)];
-//     return randomChoices;
-// }
-
-function game() {
-    return playRound(playerSelection, computerSelection); 
+// Function to make random number from choices array, rock, paper, or scissors
+function getCompChoice() {
+    return choices[Math.floor(Math.random() * choices.length)];
 }
 
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return "You WIN!";
-    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return "You WIN!";
-    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return "You WIN!";
-    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        return "You LOOSE!";
-    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        return "You LOOSE!";
-    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        return "You LOOSE!";
+let playerScore = 0;
+let compScore = 0;
+
+// when any btn's are clicked, player's choice is make, computer's is random
+function rockButton() {
+    const player =  document.getElementById('player-choice').textContent = `${choices[0]}`;
+    const comp = document.getElementById('comp-choice').textContent = `${getCompChoice()}`;
+    if (player === 'ROCK' && comp === 'SCISSORS') {
+        document.getElementById('result').innerHTML = "Player WIN!";
+        playerScore++;
+        document.getElementById('player-score').textContent = `${playerScore}`;
+    } else if (player === 'ROCK' && comp === 'PAPER') {
+        document.getElementById('result').innerHTML = "Computer WIN!";
+        compScore++;
+        document.getElementById('comp-score').textContent = `${compScore}`;
     } else {
-        return "It's TIE!!";
+        document.getElementById('result').innerHTML = "TIE!!";
     }
+    checkWinner();
+    return player, comp;
 }
 
-document.getElementById('comp-choice').innerHTML = 
-`${game()}, Player: ${playerSelection} Computer: ${computerSelection}`;
+function paperButton() {
+    checkWinner()
+    const player = document.getElementById('player-choice').textContent = `${choices[1]}`;
+    const comp = document.getElementById('comp-choice').textContent = `${getCompChoice()}`;
+    if (player === 'PAPER' && comp === 'ROCK') {
+        document.getElementById('result').innerHTML = "Player WIN!";
+        playerScore++;
+        document.getElementById('player-score').textContent = `${playerScore}`;
+    } else if (player === 'PAPER' && comp === 'SCISSORS') {
+        document.getElementById('result').innerHTML = "Computer WIN!";
+        compScore++;
+        document.getElementById('comp-score').textContent = `${compScore}`;
+    } else {
+        document.getElementById('result').innerHTML = "TIE!!";
+    }
+    checkWinner();
+    return player, comp;
+}
+
+function scissorsButton() {
+    checkWinner()
+    const player = document.getElementById('player-choice').textContent = `${choices[2]}`;
+    const comp = document.getElementById('comp-choice').textContent = `${getCompChoice()}`;
+    if (player === 'SCISSORS' && comp === 'PAPER') {
+        document.getElementById('result').innerHTML = "Player WIN!";
+        playerScore++;
+        document.getElementById('player-score').textContent = `${playerScore}`;
+    } else if (player === 'SCISSORS' && comp === 'ROCK') {
+        document.getElementById('result').innerHTML = "Computer WIN!";
+        compScore++;
+        document.getElementById('comp-score').textContent = `${compScore}`;
+    } else {
+        document.getElementById('result').innerHTML = "TIE!!";
+    }
+    checkWinner();
+    return player, comp;
+}
+
+// function to check the Winner. Winner is who first reach 5 points.
+function checkWinner() {
+    if (playerScore === 5) {
+        document.getElementById('winner').textContent = "PLAYER!";
+    } else if (compScore === 5) {
+        document.getElementById('winner').textContent = "COMPUTER!";
+    } 
+} 
+
+// function to reset all values
+function resetAll() {
+    return document.getElementById('player-choice').textContent = '',
+           document.getElementById('comp-choice').textContent = '',
+           document.getElementById('result').innerHTML = '',
+           document.getElementById('player-score').textContent = '0',
+           document.getElementById('comp-score').textContent = '0',
+           playerScore = 0, compScore = 0;
+    }
+
+
+
+
+
+
+
+
+
 

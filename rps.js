@@ -18,6 +18,7 @@ let compScore = 0;
 function rockButton() {
     const player =  document.getElementById('player-choice').textContent = `${choices[0]}`;
     const comp = document.getElementById('comp-choice').textContent = `${getCompChoice()}`;
+    
     if (player === 'ROCK' && comp === 'SCISSORS') {
         document.getElementById('result').innerHTML = "Player WIN!";
         playerScore++;
@@ -37,6 +38,7 @@ function paperButton() {
     checkWinner()
     const player = document.getElementById('player-choice').textContent = `${choices[1]}`;
     const comp = document.getElementById('comp-choice').textContent = `${getCompChoice()}`;
+    
     if (player === 'PAPER' && comp === 'ROCK') {
         document.getElementById('result').innerHTML = "Player WIN!";
         playerScore++;
@@ -56,6 +58,7 @@ function scissorsButton() {
     checkWinner()
     const player = document.getElementById('player-choice').textContent = `${choices[2]}`;
     const comp = document.getElementById('comp-choice').textContent = `${getCompChoice()}`;
+    
     if (player === 'SCISSORS' && comp === 'PAPER') {
         document.getElementById('result').innerHTML = "Player WIN!";
         playerScore++;

@@ -87,7 +87,7 @@ body {
     background-color: #5a5a58;
 }
 
-.section .container-top {
+.section .container {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
@@ -106,7 +106,7 @@ body {
     font-weight: bold;
 }
 
-.container-score {
+.score .container {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;

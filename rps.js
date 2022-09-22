@@ -87,6 +87,9 @@ function resetAll() {
            document.getElementById('result').innerHTML = '',
            document.getElementById('player-score').textContent = '0',
            document.getElementById('comp-score').textContent = '0',
+           document.getElementById('winner').textContent = '',
+           document.getElementById('winner').textContent = '';
+
            playerScore = 0, compScore = 0;
     }
 

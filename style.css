@@ -1,36 +1,44 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    background-color: brown;
+    background-color: rgb(224, 214, 117);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 15px 15px;
+}
+
 .header {
-    height: 250px;
-    background-color: #311ff5;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: #3baef0;
 }
 
 .header .container {
-    min-width: 300px;
+    min-width: 200px;
     display: flex;
     text-align: center;
     justify-content: center;
     color: white;
-    font-size: x-large;
+    font-size: 20px;
 }
 
 .content {
-    height: 100px;
     background-color: rgb(45, 208, 153);
 }
 
 .content .container {
     display: flex;
     flex-direction: column;
-    min-width: 300px;
+    min-width: 200px;
     text-align: center;
     color: white;
 }
@@ -41,27 +49,28 @@ body {
 }
 
 .buttons .container {
-    max-width: 900px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 #rockBtn, #paperBtn, #scissorsBtn {
-    width: 200px;
-    height: 80px;
-    background-color: #311ff5;
+    margin: 0 0 20px;
+    width: 130px;
+    height: 50px;
+    background-color: #3baef0;
     border-style: none;
     border-radius: 10px;
-    font-size: 28px;
+    font-size: 18px;
     color: white;
     font-weight: bold;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 #resetBtn {
-    width: 200px;
-    height: 80px;
+    width: 130px;
+    height: 50px;
     background-color: #f08a41;
     border-style: none;
     border-radius: 10px;
@@ -79,12 +88,11 @@ body {
 }
 
 .section .container-top {
-    max-width: 700px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    color: white;
-    font-size: 25px;
+    margin-top: 30px;
+    color: rgb(105, 99, 99);
+    font-size: 18px;
 }
 
 .item1, .item2, .item3 {
@@ -93,43 +101,44 @@ body {
 
 #result {
     text-align: center;
-    color: #3fceea;
-    font-size: 30px;
+    color: #0b1477;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .container-score {
-    max-width: 700px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     color: white;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .container-winner {
+    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
-    color: #c5cfc4;
-    font-size: 30px;
+    color: #4e524e;
+    font-size: 20px;
     font-weight: bold; 
 }
 
 #winner {
-    color: #09f11c; 
+    color: #f17509; 
 }
 
 .footer {
-    margin: 0;
-    padding: 0;
-    background-color: #311ff5;
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+    background-color: #3baef0;
+    font-size: 15px;
 }
 
 .footer .container {
-    padding: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-size: 15px;
 }
 
